@@ -1,0 +1,14 @@
+networks:
+  production:
+    external: true
+services:
+  teleport:
+    image: public.ecr.aws/gravitational/teleport-distroless:17.4.5
+    container_name: teleport
+    restart: unless-stopped
+    networks:
+      - production
+    volumes:
+      - ./config:/etc/teleport
+      - ./data:/var/lig/teleport
+      - ./logs:/var/log/teleport
