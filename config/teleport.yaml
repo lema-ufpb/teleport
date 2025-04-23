@@ -1,6 +1,6 @@
 version: v3
 teleport:
-  node_name: "teleport-node"
+  nodename: "teleport-node"
   data_dir: "/var/lib/teleport"
   log:
     output: stdout
